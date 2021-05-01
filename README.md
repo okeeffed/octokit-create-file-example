@@ -45,7 +45,7 @@ const octokit = new Octokit({
 });
 
 const content = fs.readFileSync('file/to/path', 'utf-8');
-const fileOutput = Base64.encode(content);
+const contentEncoded = Base64.encode(content);
 
 const { data } = await octokit.repos.createOrUpdateFileContents({
   owner: 'okeeffed',
